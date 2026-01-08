@@ -1,0 +1,104 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%); /* Optionnel */
+    --aurora-gradient: linear-gradient(125deg, #a18cd1 0%, #fbc2eb 50%, #ffecd2 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--aurora-gradient);
+    background-attachment: fixed;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Reutilisable */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.nav-content {
+    padding: 10px 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.btn-email {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-email:hover {
+    background: white;
+    color: #fbc2eb;
+}
+
+/* Grille de Projets */
+.container { padding: 80px 10%; }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover { transform: translateY(-10px); }
+
+.project-img {
+    height: 200px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
